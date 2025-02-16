@@ -1,0 +1,17 @@
+.users-management-container {
+    display: block;
+    text-align: start;
+    padding: 30px 20px 0 20px;
+}
+
+.users-management-header-container {
+    display: block;
+    text-align: start;
+}
+
+.users-management-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+

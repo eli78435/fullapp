@@ -1,0 +1,38 @@
+.main-page-container {
+    min-width: 90vw;
+    min-height: 90vh;
+    margin: 5px;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav-bar-container {
+    min-width: 20vw;
+    background-color: #514da4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-container {
+    width: 80vw;
+    background-color: #e1dcdc64;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: stretch;
+}
+
+.main-menu-container{
+    display: block;
+    height: 60px;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.user-managment-container {
+    min-height: 80%;
+    width: 100%;
+}
