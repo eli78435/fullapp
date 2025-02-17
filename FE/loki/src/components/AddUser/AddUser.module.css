@@ -1,0 +1,32 @@
+.add-user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin: 20px;
+}
+
+.add-user-container input {
+  margin-left: 5px;
+}
+
+.add-user-container button {
+  padding: 5px;
+  width: 100px;
+  margin-top: 10px;
+  display: block;
+}
+
+.add-user-form-container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: start;
+  margin-top: 20px;
+}
+
+.key-value-container {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+}
