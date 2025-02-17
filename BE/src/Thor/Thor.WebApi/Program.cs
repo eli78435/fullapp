@@ -6,6 +6,7 @@ using Autofac.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using NLog.Web;
 using Thor.WebApi;
+using Thor.WebApi.Infrastructure.Accessors.InMemory;
 using Thor.WebApi.Infrastructure.Accessors.MySql;
 
 var logger = NLogBuilder.ConfigureNLog("nlog.config").GetCurrentClassLogger();
@@ -45,13 +46,18 @@ builder.Host.UseNLog();
 
 builder.Services.AddAuthorization();
 
-builder.Services.AddDbContext<MySqlDbContext>(options =>
+builder.Services.AddDbContext<InMemoryContext>(options =>
 {
-    options.UseMySql(
-        builder.Configuration.GetConnectionString("DefaultConnection"),
-        new MySqlServerVersion(new Version(9, 2))
-    );
+    options.UseInMemoryDatabase("Employees");
 });
+
+// builder.Services.AddDbContext<MySqlDbContext>(options =>
+// {
+//     options.UseMySql(
+//         builder.Configuration.GetConnectionString("DefaultConnection"),
+//         new MySqlServerVersion(new Version(9, 2))
+//     );
+// });
 
 
 builder.Services.AddAutoMapper(typeof(WebApiMapper));

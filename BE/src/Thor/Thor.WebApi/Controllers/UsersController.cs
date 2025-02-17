@@ -63,8 +63,8 @@ public class UsersController : Controller
         
         try
         {
-            await _usersManager.AddUser(user);
-            return Ok($"User {request.UserName} registered successfully.");
+            var id = await _usersManager.AddUser(user);
+            return Ok(id);
         }
         catch (Exception e)
         {

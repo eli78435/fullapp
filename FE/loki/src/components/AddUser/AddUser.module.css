@@ -6,15 +6,10 @@
   margin: 20px;
 }
 
-.add-user-container input {
-  margin-left: 5px;
-}
-
 .add-user-container button {
   padding: 5px;
-  width: 100px;
+  width: 100%;
   margin-top: 10px;
-  display: block;
 }
 
 .add-user-form-container {
@@ -26,7 +21,22 @@
 }
 
 .key-value-container {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   text-align: right;
   margin-top: 10px;
+}
+
+.key-value-container label {
+  text-align: end;
+}
+
+.key-value-container input {
+  margin-left: 5px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
 }
